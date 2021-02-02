@@ -1,0 +1,27 @@
+/*
+ * In this program I created an array of size 12, representing the amount of months.
+ * The point is to find the total amount of money I spend each month.
+ * It also calculates the average.
+ * And it calculates the average money in two years.
+ * I used a for loop to to print the array.
+ */
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float total=0;
+    float monthsArray[12];
+// printing out the array in a form loop:
+    for(int i=0; i<=11; i++){
+        cout << "Enter an amount for month " << i+1 <<": " << endl;
+        cin >> monthsArray[i];
+        total += monthsArray[i];
+    }
+    float average = total/12;
+    float inTwoYears = (average*24);
+    cout << "the total amount is: " << total << endl;
+    cout << "the average is: " << average << endl;
+    cout << "the money in two years:" << (average*24) << endl;
+    return 0;
+}
